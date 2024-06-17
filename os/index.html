@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Scheduling Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Disk Scheduling Algorithms</h1>
+        <div class="input-section">
+            <label for="algorithm">Select Algorithm:</label>
+            <select id="algorithm">
+                <option value="fcfs">FCFS(First Come First Serve)</option>
+                <option value="sstf">SSTF(Shortest Seek Time First)</option>
+                <option value="scan">SCAN(Elevator SCAN)</option>
+                <option value="cscan">C-SCAN(Circular SCAN)</option>
+                <option value="look">LOOK(Advanced SCAN)</option>
+                <option value="clook">C-LOOK(Circular Look)</option>
+            </select>
+        </div>
+        <div class="input-section">
+            <label for="qSize">Size of the Queue:</label>
+            <input type="number" id="qSize" min="1">
+        </div>
+        <div class="input-section">
+            <label for="queueElements">Queue Elements (comma-separated):</label>
+            <input type="text" id="queueElements" placeholder="e.g., 10, 20, 30">
+        </div>
+        <div class="input-section">
+            <label for="initHead">Initial Head Position:</label>
+            <input type="number" id="initHead">
+        </div>
+        <button onclick="runAlgorithm()">Run Algorithm</button>
+    </div>
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
